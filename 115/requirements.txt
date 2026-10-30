@@ -1,0 +1,14 @@
+# 115 机器人 QJX 节拍优化版 —— pip 依赖
+# 版本号为 115 机器人(RB 2.3.5 / Python 3.10)实测环境，供参考；
+# 若目标机已装机器人软件栈(RB 2.x)，多数包通常已随 SDK 环境提供，按需补缺即可。
+#
+# 安装：source /home/agi/app/env.sh /home/agi/app && python3 -m pip install -r requirements.txt
+#
+paho-mqtt            # MQTT 通信(minth 控制 + 服务端)
+numpy                # 矩阵/位姿计算 (115 实测 2.2.6)
+opencv-python        # 视觉(AprilTag 检测)   (115 实测 cv2 5.0.0)
+scipy                # 视觉 SDK 几何计算依赖 (115 实测 1.15.3)
+#
+# 不在 pip、需另行提供的外部依赖(见 部署手册.md):
+#   - agibot_gdk          机器人 SDK，随机器人软件(/home/agi/app/gdk/lib)，勿 pip 装
+#   - G2_AprilTag_Placement 视觉包，从源机 /home/agi/ 对拷
